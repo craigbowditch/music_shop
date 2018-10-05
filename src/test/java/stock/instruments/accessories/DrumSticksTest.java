@@ -1,4 +1,4 @@
-package accessories;
+package stock.instruments.accessories;
 
 import org.junit.Before;
 import org.junit.Test;

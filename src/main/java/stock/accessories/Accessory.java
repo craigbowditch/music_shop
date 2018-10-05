@@ -1,8 +1,9 @@
 package stock.accessories;
 
+import stock.Sellable;
 import stock.Stock;
 
-public abstract class Accessory extends Stock {
+public abstract class Accessory extends Stock{
 
     private String type;
     private String make;
