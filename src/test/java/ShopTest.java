@@ -39,10 +39,10 @@ public class ShopTest {
         assertEquals(1, shop.stockCount());
     }
 
-    //    @Test
-//    public void canCalculateTotalPotentialProfit() {
-//        shop.add(tuner);
-//        shop.add(piano);
-//        assertEquals
-//    }
+        @Test
+    public void canCalculateTotalPotentialProfit() {
+        shop.add(tuner);
+        shop.add(piano);
+        assertEquals(166.00, shop.calculateTotalPotentialProfit(), 0.01);
+    }
 }

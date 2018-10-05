@@ -29,4 +29,13 @@ public class Shop {
         }
         this.stock.remove(itemToRemove);
     }
+
+    public double calculateTotalPotentialProfit() {
+        double profit = 0.00;
+        for (Sellable item : this.stock){
+            double itemProfit = item.calculateMarkup();
+            profit += itemProfit;
+        }
+        return profit;
+    }
 }
