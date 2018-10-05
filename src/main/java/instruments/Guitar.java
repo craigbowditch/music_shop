@@ -1,10 +1,11 @@
 package instruments;
 
-public class Guitar {
+public class Guitar extends Instrument {
 
     private int numberOfStrings;
 
-    public Guitar(int numberOfStrings) {
+    public Guitar(String material, String colour, InstrumentType type, String make, int numberOfStrings) {
+        super(material, colour, type, make);
         this.numberOfStrings = numberOfStrings;
     }
 

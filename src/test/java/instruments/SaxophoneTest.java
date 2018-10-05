@@ -11,7 +11,27 @@ public class SaxophoneTest {
 
     @Before
     public void before() throws Exception {
-        saxophone = new Saxophone("Single");
+        saxophone = new Saxophone("Yellow Brass", "Natural", InstrumentType.WOODWIND, "Selmer", "Single");
+    }
+
+    @Test
+    public void hasMaterial() {
+        assertEquals("Yellow Brass", saxophone.getMaterial());
+    }
+
+    @Test
+    public void hasColour() {
+        assertEquals("Natural", saxophone.getColour());
+    }
+
+    @Test
+    public void hasType() {
+        assertEquals(InstrumentType.WOODWIND, saxophone.getType());
+    }
+
+    @Test
+    public void hasMake() {
+        assertEquals("Selmer", saxophone.getMake());
     }
 
     @Test

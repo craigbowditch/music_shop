@@ -1,10 +1,11 @@
 package instruments;
 
-public class Saxophone {
+public class Saxophone extends Instrument {
 
     private String typeOfReed;
 
-    public Saxophone(String typeOfReed) {
+    public Saxophone(String material, String colour, InstrumentType type, String make, String typeOfReed) {
+        super(material, colour, type, make);
         this.typeOfReed = typeOfReed;
     }
 

@@ -11,7 +11,27 @@ public class PianoTest {
 
     @Before
     public void before() throws Exception {
-        piano = new Piano(88);
+        piano = new Piano("Spruce", "Black", InstrumentType.KEYBOARD, "Yamaha", 88);
+    }
+
+    @Test
+    public void hasMaterial() {
+        assertEquals("Spruce", piano.getMaterial());
+    }
+
+    @Test
+    public void hasColour() {
+        assertEquals("Black", piano.getColour());
+    }
+
+    @Test
+    public void hasType() {
+        assertEquals(InstrumentType.KEYBOARD, piano.getType());
+    }
+
+    @Test
+    public void hasMake() {
+        assertEquals("Yamaha", piano.getMake());
     }
 
     @Test

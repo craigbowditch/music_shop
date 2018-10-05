@@ -11,7 +11,27 @@ public class GuitarTest {
 
     @Before
     public void before() throws Exception {
-        guitar = new Guitar(6);
+        guitar = new Guitar("Wood", "Sunburst", InstrumentType.STRING, "Martin", 6);
+    }
+
+    @Test
+    public void hasMaterial() {
+        assertEquals("Wood", guitar.getMaterial());
+    }
+
+    @Test
+    public void hasColour() {
+        assertEquals("Sunburst", guitar.getColour());
+    }
+
+    @Test
+    public void hasType() {
+        assertEquals(InstrumentType.STRING, guitar.getType());
+    }
+
+    @Test
+    public void hasMake() {
+        assertEquals("Martin", guitar.getMake());
     }
 
     @Test
