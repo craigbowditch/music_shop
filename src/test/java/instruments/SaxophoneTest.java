@@ -38,4 +38,9 @@ public class SaxophoneTest {
     public void hasTypeOfReed() {
         assertEquals("Single", saxophone.getTypeOfReed());
     }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Careless whisper eat your heart out", saxophone.play());
+    }
 }

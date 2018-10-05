@@ -38,4 +38,9 @@ public class PianoTest {
     public void hasNumberOfKeys() {
         assertEquals(88, piano.getNumberOfKeys());
     }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Bachesque wizardry", piano.play());
+    }
 }

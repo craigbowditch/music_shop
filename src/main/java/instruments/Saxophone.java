@@ -12,4 +12,8 @@ public class Saxophone extends Instrument {
     public String getTypeOfReed() {
         return typeOfReed;
     }
+
+    public String play(){
+        return "Careless whisper eat your heart out";
+    }
 }
