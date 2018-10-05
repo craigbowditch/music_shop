@@ -11,7 +11,7 @@ public class GuitarTest {
 
     @Before
     public void before() throws Exception {
-        guitar = new Guitar("Wood", "Sunburst", InstrumentType.STRING, "Martin", 6);
+        guitar = new Guitar("Wood", "Sunburst", InstrumentType.STRING, "Martin", 120.00, 250.00, 6);
     }
 
     @Test
@@ -37,6 +37,16 @@ public class GuitarTest {
     @Test
     public void hasNumberOfStrings() {
         assertEquals(6, guitar.getNumberOfStrings());
+    }
+
+    @Test
+    public void hasBuyingPrice() {
+        assertEquals(120.00, guitar.getBuyingPrice(), 0.01);
+    }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(250.00, guitar.getSellingPrice(), 0.01);
     }
 
     @Test

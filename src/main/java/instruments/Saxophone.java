@@ -4,8 +4,8 @@ public class Saxophone extends Instrument {
 
     private String typeOfReed;
 
-    public Saxophone(String material, String colour, InstrumentType type, String make, String typeOfReed) {
-        super(material, colour, type, make);
+    public Saxophone(String material, String colour, InstrumentType type, String make, double buyingPrice, double sellingPrice, String typeOfReed) {
+        super(material, colour, type, make, buyingPrice, sellingPrice);
         this.typeOfReed = typeOfReed;
     }
 

@@ -11,7 +11,7 @@ public class PianoTest {
 
     @Before
     public void before() throws Exception {
-        piano = new Piano("Spruce", "Black", InstrumentType.KEYBOARD, "Yamaha", 88);
+        piano = new Piano("Spruce", "Black", InstrumentType.KEYBOARD, "Yamaha", 550.00, 710.00, 88);
     }
 
     @Test
@@ -37,6 +37,16 @@ public class PianoTest {
     @Test
     public void hasNumberOfKeys() {
         assertEquals(88, piano.getNumberOfKeys());
+    }
+
+    @Test
+    public void hasBuyingPrice() {
+        assertEquals(550.00, piano.getBuyingPrice(), 0.01);
+    }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(710.00, piano.getSellingPrice(), 0.01);
     }
 
     @Test

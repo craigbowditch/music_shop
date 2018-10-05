@@ -11,7 +11,7 @@ public class SaxophoneTest {
 
     @Before
     public void before() throws Exception {
-        saxophone = new Saxophone("Yellow Brass", "Natural", InstrumentType.WOODWIND, "Selmer", "Single");
+        saxophone = new Saxophone("Yellow Brass", "Natural", InstrumentType.WOODWIND, "Selmer", 350.00, 480.00, "Single");
     }
 
     @Test
@@ -37,6 +37,16 @@ public class SaxophoneTest {
     @Test
     public void hasTypeOfReed() {
         assertEquals("Single", saxophone.getTypeOfReed());
+    }
+
+    @Test
+    public void hasBuyingPrice() {
+        assertEquals(350.00, saxophone.getBuyingPrice(), 0.01);
+    }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(480.00, saxophone.getSellingPrice(), 0.01);
     }
 
     @Test
