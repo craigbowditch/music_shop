@@ -1,4 +1,4 @@
-package instruments;
+package stock.instruments;
 
 public enum InstrumentType {
 

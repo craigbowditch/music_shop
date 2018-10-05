@@ -2,6 +2,8 @@ package instruments;
 
 import org.junit.Before;
 import org.junit.Test;
+import stock.instruments.InstrumentType;
+import stock.instruments.Piano;
 
 import static org.junit.Assert.assertEquals;
 
@@ -11,7 +13,7 @@ public class PianoTest {
 
     @Before
     public void before() throws Exception {
-        piano = new Piano("Spruce", "Black", InstrumentType.KEYBOARD, "Yamaha", 550.00, 710.00, 88);
+        piano = new Piano(550.00, 710.00,"Spruce", "Black", InstrumentType.KEYBOARD, "Yamaha",  88);
     }
 
     @Test
@@ -52,5 +54,10 @@ public class PianoTest {
     @Test
     public void canPlay() {
         assertEquals("Bachesque wizardry", piano.play());
+    }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(160.00, piano.calculateMarkup(), 0.01);
     }
 }

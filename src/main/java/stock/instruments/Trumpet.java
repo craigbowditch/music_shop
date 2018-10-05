@@ -1,11 +1,11 @@
-package instruments;
+package stock.instruments;
 
 public class Trumpet extends Instrument {
 
     private int numberOfValves;
 
-    public Trumpet(String material, String colour, InstrumentType type, String make, double buyingPrice, double sellingPrice, int numberOfValves) {
-        super(material, colour, type, make, buyingPrice, sellingPrice);
+    public Trumpet(double buyingPrice, double sellingPrice, String material, String colour, InstrumentType type, String make, int numberOfValves) {
+        super(buyingPrice, sellingPrice, material, colour, type, make);
         this.numberOfValves = numberOfValves;
     }
 

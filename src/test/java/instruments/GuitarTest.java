@@ -2,6 +2,8 @@ package instruments;
 
 import org.junit.Before;
 import org.junit.Test;
+import stock.instruments.Guitar;
+import stock.instruments.InstrumentType;
 
 import static org.junit.Assert.assertEquals;
 
@@ -11,7 +13,7 @@ public class GuitarTest {
 
     @Before
     public void before() throws Exception {
-        guitar = new Guitar("Wood", "Sunburst", InstrumentType.STRING, "Martin", 120.00, 250.00, 6);
+        guitar = new Guitar(120.00, 250.00,"Wood", "Sunburst", InstrumentType.STRING, "Martin",  6);
     }
 
     @Test
@@ -52,5 +54,10 @@ public class GuitarTest {
     @Test
     public void canPlay() {
         assertEquals("Jimi Hendrix screaming solo", guitar.play());
+    }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(130.00, guitar.calculateMarkup(),0.01);
     }
 }
