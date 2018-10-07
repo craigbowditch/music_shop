@@ -20,14 +20,8 @@ public class Shop {
         this.stock.add(item);
     }
 
-    public void remove(Sellable soldItem) {
-        Sellable itemToRemove = null;
-        for (Sellable item : this.stock){
-            if (item == soldItem){
-                itemToRemove = item;
-            }
-        }
-        this.stock.remove(itemToRemove);
+    public void remove(Sellable item) {
+        this.stock.remove(item);
     }
 
     public double calculateTotalPotentialProfit() {
